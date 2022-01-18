@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.androiddevs.shoppinglisttestingyt.data.local.ShoppingItemDatabase
 import com.androiddevs.shoppinglisttestingyt.data.remote.PixabayAPI
+import com.androiddevs.shoppinglisttestingyt.other.Constants.BASE_URL
 import com.androiddevs.shoppinglisttestingyt.other.Constants.DATABASE_NAME
 import dagger.Module
 import dagger.Provides
@@ -16,13 +17,13 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(ApplicationComponent::class)
-class AppModule {
+object AppModule {
 
     @Singleton
     @Provides
     fun provideShoppingItemDatabase(
         @ApplicationContext context: Context
-    ) = Room.databaseBuilder(context, ShoppingItemDatabase::class.java,DATABASE_NAME)
+    ) = Room.databaseBuilder(context, ShoppingItemDatabase::class.java, DATABASE_NAME).build()
 
     @Singleton
     @Provides
@@ -32,7 +33,7 @@ class AppModule {
 
     @Singleton
     @Provides
-    fun providePixabayApi(): PixabayAPI{
+    fun providePixabayApi(): PixabayAPI {
         return Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
