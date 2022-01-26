@@ -1,6 +1,7 @@
 package com.androiddevs.shoppinglisttestingyt.ui
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
+import com.androiddevs.shoppinglisttestingyt.MainCoroutineRule
 import com.androiddevs.shoppinglisttestingyt.getOrAwaitValueTest
 import com.androiddevs.shoppinglisttestingyt.other.Constants
 import com.androiddevs.shoppinglisttestingyt.other.Status
@@ -16,6 +17,10 @@ import org.junit.Test
 class ShoppingViewModelTest {
     @get:Rule
     var instantTaskExecutorRule = InstantTaskExecutorRule()
+
+    @get:Rule
+    var mainCoroutineRule = MainCoroutineRule()
+
 
     private lateinit var viewModel: ShoppingViewModel
     @Before
