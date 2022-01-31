@@ -33,10 +33,7 @@ Head over to the Pixabay api and get your own API-KEY as well.
 ## Architecture
 
 ### Implemented using Clean Architecture
-The following diagram shows the structure of this project with 3 layers:
-- Presentation
-- Domain
-- Data
+The application is built using MVVM architecture, the following diagram shows the structure of this project with 3 layers:
 
 <br>
 <p align="center">
@@ -53,7 +50,8 @@ The following diagram shows the structure of this project with 3 layers:
 
 
 The App is not organized into multiple modules but follows the same principles of
-the Presentation, Domain, and Data Layers.
+MVVM architecture.
+
 The presentation layer handles the UI work with the logic contained in the **ViewModel**.
 The UI uses a **LiveData** object from the ViewModel and observes it using the **Observer Pattern**.
 A ListAdapter handles the actual displaying of the shoppingItems. Data over the network is retrieved using
@@ -69,27 +67,31 @@ This app will make use of the following libraries:
 
 - [Jetpack](https://developer.android.com/jetpack)🚀
 
-  - [Espresso](https://developer.android.com/training/testing/espresso) - Use Espresso to write concise, beautiful, and reliable Android UI tests.
-  - [Mockito](https://github.com/mockito/mockito) - Mockito is a popular open source framework for mocking objects in software test.
-  - [Robolectric]() - Robolectric is a framework that brings fast and reliable unit tests to Android. Tests run inside the JVM 
-  - [Hamcrest](http://hamcrest.org/JavaHamcrest/) - A framework that assists writing software tests in the Java programming language. It supports creating customized assertion matchers
-  - [Google Truth Library](https://github.com/google/truth) - Truth makes your test assertions and failure messages more readable.
-  - [Junit](https://junit.org/junit4/) - JUnit is a unit testing framework for the Java programming language.
+  Android Components
+  
   - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI data to survive configuration changes and is lifecycle-aware
   - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - Declaratively bind observable data to UI elements
   - [Navigation](https://developer.android.com/guide/navigation/) - Handle everything needed for in-app navigation
   - [Room DB](https://developer.android.com/topic/libraries/architecture/room) - Fluent SQLite database access
   - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Notify views when underlying database changes
  
-- [MockWebServer](https://github.com/square/okhttp/tree/master/mockwebserver) - Testing API endpoints 
-- [Retrofit](https://square.github.io/retrofit/) - type safe http client with coroutines support
-- [Gson](https://github.com/google/gson) - A Java serialization/deserialization library to convert Java Objects into JSON and back
-- [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - A fast dependency injector for Android and Java.
-- [okhttp-logging-interceptor](https://github.com/square/okhttp/blob/master/okhttp-logging-interceptor/README.md) - logging HTTP request related data.
-- [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library Support for coroutines
-- [Material Design](https://material.io/develop/android/docs/getting-started/) - build awesome beautiful UIs.🔥🔥
-- [Glide](https://github.com/bumptech/glide) - Hassle-free image loading
-- [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
+  Testing 
+  
+  - [Espresso](https://developer.android.com/training/testing/espresso) - Use Espresso to write concise, beautiful, and reliable Android UI tests.
+  - [Mockito](https://github.com/mockito/mockito) - Mockito is a popular open source framework for mocking objects in software test.
+  - [Robolectric]() - Robolectric is a framework that brings fast and reliable unit tests to Android. Tests run inside the JVM 
+  - [Hamcrest](http://hamcrest.org/JavaHamcrest/) - A framework that assists writing software tests in the Java programming language. It supports creating customized assertion matchers
+  - [Google Truth Library](https://github.com/google/truth) - Truth makes your test assertions and failure messages more readable.
+  - [Junit](https://junit.org/junit4/) - JUnit is a unit testing framework for the Java programming language.
+  - [MockWebServer](https://github.com/square/okhttp/tree/master/mockwebserver) - Testing API endpoints 
+  - [Retrofit](https://square.github.io/retrofit/) - type safe http client with coroutines support
+  - [Gson](https://github.com/google/gson) - A Java serialization/deserialization library to convert Java Objects into JSON and back
+  - [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - A fast dependency injector for Android and Java.
+  - [okhttp-logging-interceptor](https://github.com/square/okhttp/blob/master/okhttp-logging-interceptor/README.md) - logging HTTP request related data.
+  - [kotlinx.coroutines](https://github.com/Kotlin/kotlinx.coroutines) - Library Support for coroutines
+  - [Material Design](https://material.io/develop/android/docs/getting-started/) - build awesome beautiful UIs.🔥🔥
+  - [Glide](https://github.com/bumptech/glide) - Hassle-free image loading
+  - [Timber](https://github.com/JakeWharton/timber) - A logger with a small, extensible API which provides utility on top of Android's normal Log class.
 
 
 ## Extras
