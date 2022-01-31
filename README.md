@@ -67,7 +67,7 @@ This app will make use of the following libraries:
 
 - [Jetpack](https://developer.android.com/jetpack)🚀
 
-  Android Components
+  Android Components Dependencies
   
   - [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Manage UI data to survive configuration changes and is lifecycle-aware
   - [Data Binding](https://developer.android.com/topic/libraries/data-binding) - Declaratively bind observable data to UI elements
@@ -75,7 +75,7 @@ This app will make use of the following libraries:
   - [Room DB](https://developer.android.com/topic/libraries/architecture/room) - Fluent SQLite database access
   - [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - Notify views when underlying database changes
  
-  Testing 
+  Testing Dependencies
   
   - [Espresso](https://developer.android.com/training/testing/espresso) - Use Espresso to write concise, beautiful, and reliable Android UI tests.
   - [Mockito](https://github.com/mockito/mockito) - Mockito is a popular open source framework for mocking objects in software test.
@@ -98,7 +98,6 @@ This app will make use of the following libraries:
 
 ### Known Bugs
 
-- As at the time this project was made, testing and UIs was not a major concern, the test coverage is not 100% 
 - The project is currently being maintained any. Contributions are most welcome if you would like to add more modules to the project, you can reach me through my [Contacts](#Contacts) below.
 - Thanks for understanding.
 
