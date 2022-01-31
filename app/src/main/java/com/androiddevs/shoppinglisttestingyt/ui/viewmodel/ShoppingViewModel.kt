@@ -33,7 +33,7 @@ class ShoppingViewModel @ViewModelInject constructor(
     val insertShoppingItemStatus: LiveData<Event<Resource<ShoppingItem>>> =
         _insertShoppingItemStatus
 
-    private fun setCurlImageUrl(url: String) {
+fun setCurlImageUrl(url: String) {
         _curlImageUrl.postValue(url)
     }
 
